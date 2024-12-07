@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Parkinsans", sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* form container */
+        #main-sec {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(231, 180, 137);
+        }
+
+        .booking-container {
+            display: flex;
+            box-shadow: 0px 0px 10px 1px gray;
+            background-color: #fff;
+            border-radius: 5px;
+            gap: 1rem;
+
+            padding: 1rem;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            min-width: 40%;
+            min-height: 80vh;
+        }
+
+        .form-container .form-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-width: 50%;
+            flex-grow: 2;
+        }
+
+        .form-wrapper input,
+        .field-control select {
+            background-color: rgba(208, 208, 208, 0.4);
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-container #check-in {
+            padding: 0.5rem;
+        }
+
+        .form-container input {
+            margin-bottom: 1rem;
+        }
+
+        .form-container .row-div {
+            display: inline-flex;
+            gap: 0.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-container .row-div .field-control {
+            min-width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container .row-div .field-control select {
+            padding: 0.5rem;
+            overflow: hidden;
+        }
+
+        .button .btn-custom {
+            padding: 0.5rem;
+            background-color: orange;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+
+            width: 100%;
+        }
+
+        /* form container */
+
+        /* image container */
+        .image-container {
+            min-width: 60%;
+            padding: 0.5rem;
+        }
+
+        .upper-div img {
+            min-height: 60vh;
+            max-width: 100%;
+            object-fit: cover;
+
+        }
+
+        .upper-div {
+            position: relative;
+            color: #fff;
+            min-height: 60vh;
+        }
+
+        .upper-div .details {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            background-color: rgba(117, 117, 117, 0.526);
+            padding: 5px;
+        }
+
+        .lower-div {
+            display: flex;
+            overflow: hidden;
+            gap: 16px;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .image-container {
+            flex: 1 1 calc(35.33% - 20px);
+            box-sizing: border-box;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* image container */
+    </style>
+</head>
+
+<body>
+    <section id="main-sec">
+        <div class="container">
+            <div class="booking-container">
+                <div class="form-container">
+                    <div class="form-wrapper">
+                        <label for="check-in">Check In</label>
+                        <input type="date" name="check-in" id="check-in">
+
+                        <label for="check-out">Check Out</label>
+                        <input type="date" name="check-out" id="check-in">
+
+                        <div class="row-div">
+                            <div class="field-control">
+                                <label for="check-out">Adults</label>
+                                <select id="adults">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="field-control">
+                                <label for="check-out">Children</label>
+                                <select id="children">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="button">
+                        <button class="btn-custom">Book a room</button>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <div class="upper-div">
+                        <img src="./images/cover.jpg" alt="upper-image-booking">
+                        <div class="details">
+                            <h4 class="image-title">Golden Apartments</h4>
+                            <p class="image-desc">Punta Cana, Dominican Republic</p>
+                        </div>
+                    </div>
+                    <div class="lower-div">
+                        <div class="image-container">
+                            <img src="./images/cover.jpg" alt="image1">
+                        </div>
+                        <div class="image-container">
+                            <img src="./images/cover.jpg" alt="image1">
+                        </div>
+                        <div class="image-container">
+                            <img src="./images/cover.jpg" alt="image1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
